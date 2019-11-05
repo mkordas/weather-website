@@ -12,9 +12,8 @@ public class OpenWeatherWebClient implements WeatherWebClient {
 
     @Override
     public Mono<OpenWeatherData> weatherForCity(String city) {
-        Mono<OpenWeatherData> mono = client.get()
+        return client.get()
                 .uri("/data/2.5/weather?q={city}&APPID={APIKEY}", city, API_KEY)
                 .retrieve().bodyToMono(OpenWeatherData.class);
-        return mono;
     }
 }
