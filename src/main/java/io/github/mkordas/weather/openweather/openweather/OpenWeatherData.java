@@ -37,6 +37,6 @@ public class OpenWeatherData {
     }
 
     private static String formatAsAmPmHour(long timestamp) {
-        return DATE_TIME_FORMATTER.format(Instant.ofEpochSecond(timestamp));
+        return DATE_TIME_FORMATTER.format(Instant.ofEpochSecond(timestamp)).toLowerCase();
     }
 }
