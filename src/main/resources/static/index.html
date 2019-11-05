@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Weather Website</h1>
+    <select @load="onChange($event)" required>
+        <option value="London">London</option>
+        <option value="Hong Kong">Hong Kong</option>
+    </select>
+    <p>{{ weather.date }}</p>
+    <p>{{ weather.temperatureCelsius }} °C, {{ weather.temperatureFahrenheit }} °F</p>
+    <p>{{ weather.weatherDescription }}</p>
+    <p>Sunrise: {{ weather.sunriseHour }}</p>
+    <p>Sunset: {{ weather.sunsetHour }}</p>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
